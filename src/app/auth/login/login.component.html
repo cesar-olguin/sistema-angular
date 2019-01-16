@@ -1,0 +1,12 @@
+<form class="form">
+  <div class="form-group">
+    <label for="InputEmail">Nombre de Usuario</label>
+    <input type="text" #username class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Ingresa tu usuario">
+    <small id="emailHelp" class="form-text text-muted">No compartas tus datos.</small>
+  </div>
+  <div class="form-group">
+    <label for="InputPassword">Contraseña</label>
+    <input type="password" #password class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+  </div>
+  <button (click)="logeo(username.value, password.value, $event)" type="submit" class="btn btn-primary">Login</button>
+</form>
