@@ -1,12 +1,15 @@
-<form class="form">
-  <div class="form-group">
-    <label for="InputEmail">Nombre de Usuario</label>
-    <input type="text" #username class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Ingresa tu usuario">
-    <small id="emailHelp" class="form-text text-muted">No compartas tus datos.</small>
-  </div>
-  <div class="form-group">
-    <label for="InputPassword">Contraseña</label>
-    <input type="password" #password class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
-  </div>
-  <button (click)="logeo(username.value, password.value, $event)" type="submit" class="btn btn-primary">Login</button>
+<form class="form-signin text-center">
+  <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Bienvenido</h1>
+  <label for="inputEmail" class="sr-only">Usuario</label>
+  <input type="text" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
+  <label for="inputPassword" class="sr-only">Contraseña</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+  <!-- <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Recordar.
+    </label>
+  </div> -->
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesion</button>
+  <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p> -->
 </form>

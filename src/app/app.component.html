@@ -18,19 +18,26 @@
   </li>
 </ul> -->
 
-<div class="wrapper">
+<div>
 
   <!-- Sidebar -->
-  <div id="sidebar">
+  <header id="sidebar">
     <app-navbar></app-navbar>
-  </div>
+  </header>
 
   <!-- Page Content -->
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
+  <main role="main" class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <app-footer></app-footer>
+  </footer>
 
 </div>
-
-
-<app-footer></app-footer>

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRouting } from './app.routing';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './template/navbar/navbar.component';
 import { ActividadComponent } from './actividad/actividad.component';
@@ -44,7 +44,7 @@ import { PersonalComponent } from './personal/personal.component';
     EmpresaComponent,
     PersonalComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRouting, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
