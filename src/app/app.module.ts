@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRouting } from './app.routing';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './template/navbar/navbar.component';
-import { ActividadComponent } from './actividad/actividad.component';
+import { ActividadComponent } from './actividades/actividad/actividad.component';
 import { Pagina404Component } from './pagina404/pagina404.component';
 import { LoginComponent } from './auth/login/login.component';
 
@@ -21,6 +21,7 @@ import { MenuComponent } from './empresa/menu-empresa/menu.component';
 import { SidebarComponent } from './template/sidebar/sidebar.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { PersonalComponent } from './personal/personal.component';
+import { ActividadesComponent } from './actividades/actividades.component';
 
 // import { LoginService } from './auth/login/login.service';
 
@@ -42,7 +43,8 @@ import { PersonalComponent } from './personal/personal.component';
     MenuComponent,
     SidebarComponent,
     EmpresaComponent,
-    PersonalComponent
+    PersonalComponent,
+    ActividadesComponent
   ],
   imports: [BrowserModule, AppRouting, FormsModule],
   providers: [],

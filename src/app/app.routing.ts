@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ActividadComponent } from './actividad/actividad.component';
+import { ActividadComponent } from './actividades/actividad/actividad.component';
 import { Pagina404Component } from './pagina404/pagina404.component';
 import { LoginComponent } from './auth/login/login.component';
 import { NuevaEmpresaComponent } from './empresa/nueva-empresa/nueva-empresa.component';
@@ -10,6 +10,7 @@ import { ProveedorComponent } from './empresa/proveedor-empresa/proveedor.compon
 import { EmpresaComponent } from './empresa/empresa.component';
 import { PersonalComponent } from './personal/personal.component';
 import { AgregarPersonalComponent } from './personal/agregar-personal/agregar-personal.component';
+import { ActividadesComponent } from './actividades/actividades.component';
 
 const routes: Routes = [
   { path: 'actividades/registro', component: ActividadComponent },
@@ -27,7 +28,12 @@ const routes: Routes = [
   { path: 'personal', component: PersonalComponent  },
   { path: 'personal/nuevo', component: AgregarPersonalComponent },
   { path: 'personal/editar', component: AgregarPersonalComponent },
+  // Actividades
+  { path: 'actividades', component: ActividadesComponent, children: [
+    { path: 'nueva-actividad', component: ActividadComponent }
+  ] },
   { path: 'cotizacion', component: Pagina404Component },
+  // Pagina 404
   { path: '404', component: Pagina404Component }
 ];
 
