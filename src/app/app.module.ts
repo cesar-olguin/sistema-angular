@@ -22,8 +22,35 @@ import { SidebarComponent } from './template/sidebar/sidebar.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { PersonalComponent } from './personal/personal.component';
 import { ActividadesComponent } from './actividades/actividades.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatRippleModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatSortModule,
+  MatTableModule} from '@angular/material';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CotizacionComponent } from './cotizacion/cotizacion.component';
+import { NuevaComponent } from './cotizacion/nueva/nueva.component';
+import { DepositoNuevaCotizacionComponent } from './cotizacion/nueva/deposito-nueva-cotizacion/deposito-nueva-cotizacion.component';
+import { ServiciosAdicionalesNuevaCotizacionComponent } from './cotizacion/nueva/servicios-adicionales-nueva-cotizacion/servicios-adicionales-nueva-cotizacion.component';
+import { ClausulasNuevaCotizacionComponent } from './cotizacion/nueva/clausulas-nueva-cotizacion/clausulas-nueva-cotizacion.component';
+import { ServiciosNuevaCotizacionComponent } from './cotizacion/nueva/servicios-nueva-cotizacion/servicios-nueva-cotizacion.component';
 // import { LoginService } from './auth/login/login.service';
+
+const modules = [
+  MatButtonModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatRippleModule,
+  MatInputModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatSortModule,
+  MatTableModule
+];
 
 @NgModule({
   declarations: [
@@ -44,9 +71,23 @@ import { ActividadesComponent } from './actividades/actividades.component';
     SidebarComponent,
     EmpresaComponent,
     PersonalComponent,
-    ActividadesComponent
+    ActividadesComponent,
+    CotizacionComponent,
+    NuevaComponent,
+    DepositoNuevaCotizacionComponent,
+    ServiciosAdicionalesNuevaCotizacionComponent,
+    ClausulasNuevaCotizacionComponent,
+    ServiciosNuevaCotizacionComponent
   ],
-  imports: [BrowserModule, AppRouting, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRouting,
+    FormsModule,
+    BrowserAnimationsModule,
+    modules,
+    NgbModule
+  ],
+  exports: [modules],
   providers: [],
   bootstrap: [AppComponent]
 })
